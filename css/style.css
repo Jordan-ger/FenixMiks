@@ -10,6 +10,7 @@
     --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
 }
 
+
 *{
     font-family: 'Poppins', sans-serif;
     margin:0; padding:0;
@@ -324,6 +325,41 @@ section{
     right: 0;
     left: 10%;
 }
+
+.moving-image {
+    position: absolute; 
+    top: 0; 
+}
+
+#first-image {
+    right: -75px;
+    top: 16rem; 
+}
+
+#second-image {
+    right: 11rem; 
+    margin-top: 10px;
+    top: 11rem; 
+}
+
+.moving-image img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+#first-image img {
+    width: 300px; 
+}
+
+#second-image img {
+    width: 115px; 
+}
+
+.moving-image.zoomed img {
+    transform: scale(1.2); 
+}
+
+
 
 .home .row .content h3{
     color:#c9bd1e;
@@ -823,3 +859,4 @@ loader
     }
 
 }
+
