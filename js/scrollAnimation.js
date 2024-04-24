@@ -26,3 +26,18 @@ function handleScroll() {
 }
 
 window.addEventListener("scroll", handleScroll);
+
+const movingImages = document.querySelectorAll('.moving-image');
+
+movingImages.forEach(image => {
+  image.addEventListener('mouseover', () => {
+    image.style.cursor = 'pointer';
+  });
+
+  image.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+});

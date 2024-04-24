@@ -46,25 +46,27 @@ function fadeOut(){
   setTimeout(loader, 4000);
 }
 
-var swiper = new Swiper(".books-slider", {
-  loop:true,
-  centeredSlides: true,
-  autoplay: {
-    delay: 9500,
-    disableOnInteraction: false,
-  },
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-    },
-    768: {
-      slidesPerView: 2,
-    },
-    1024: {
-      slidesPerView: 3,
-    },
-  },
-});
+// var swiper = new Swiper(".books-slider", {
+//   direction: "vertical",
+//   loop: true,
+//   centeredSlides: true,
+//   autoplay: {
+//     delay: 9500,
+//     disableOnInteraction: false,
+//   },
+
+//   breakpoints: {
+//     0: {
+//       slidesPerView: 1,
+//     },
+//     1024: {
+//       slidesPerView: 1,
+//     },
+//     1: {
+//       slidesPerView: 1,
+//     },
+//   },
+// });
 
 var swiper = new Swiper(".featured-slider", {
   spaceBetween: 10,
@@ -89,7 +91,7 @@ var swiper = new Swiper(".featured-slider", {
       slidesPerView: 3,
     },
     1024: {
-      slidesPerView: 4,
+      slidesPerView: 5,
     },
   },
 });
@@ -157,4 +159,12 @@ var swiper = new Swiper(".blogs-slider", {
       slidesPerView: 3,
     },
   },
+});
+
+document.addEventListener('mousemove', function(e) {
+  const movingText = document.getElementById('moving-text');
+  const x = e.clientX;
+  const y = e.clientY;
+  movingText.style.left = x + 'px';
+  movingText.style.top = y + 'px';
 });
