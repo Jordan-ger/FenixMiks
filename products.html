@@ -7,100 +7,101 @@
     <title>online store for the sale of freeze-dried products</title>
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/styleProd.css">
+    <script src="js/scrollAnimation.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/transition.js"></script>
+    <script src="js/script.js"></script>
 
 </head>
 <body>
     
 
-<header class="header">
+    <header class="header">
 
-    <div class="header-1">
-        
-        <a href="index.html" class="logo"></i> FenixMiks </a>
-    </div>
-
-        <!-- <form action="" class="search-form">
-            <input type="search" name="" placeholder="search here..." id="search-box">
-            <label for="search-box" class="fas fa-search"></label>
-        </form> -->
-
-        <div class="icons">
-            <div id="search-btn" class="fas fa-search"></div>
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-shopping-cart"></a>
-            <div id="login-btn" class="fas fa-user"></div>
+        <div class="header-1">
+    
+            <a href="#" class="logo"></i> FenixMiks </a>
+    
+            <!-- <form action="" class="search-form">
+                <input type="search" name="" placeholder="search here..." id="search-box">
+                <label for="search-box" class="fas fa-search"></label>
+            </form> -->
+    
+            <div class="icons">
+                <div id="search-btn" class="fas fa-search"></div>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <div id="login-btn" class="fas fa-user"></div>
+            </div>
+    
         </div>
-
-    </div>
-
-    <div class="header-2">
-        <nav class="navbar">
-            <a href="index.html">Главная</a>
-            <a href="products.html">Продукция</a>
-            <a href="featured.html">Рекомендуемые</a>
-            <a href="new_arrivals.html">Новое</a>
-            <a href="reviews.html">Обзоры</a>
-            <a href="blog.html">Блог</a>
-        </nav>
-    </div>
-
-</header>
-
-
-<nav class="bottom-navbar">
-    <a href="#home" class="fas fa-home"></a>
-    <a href="#featured" class="fas fa-list"></a>
-    <a href="#arrivals" class="fas fa-tags"></a>
-    <a href="#reviews" class="fas fa-comments"></a>
-    <a href="#blogs" class="fas fa-blog"></a>
-</nav>
-
-
-<div class="login-form-container">
-
-    <div id="close-login-btn" class="fas fa-times"></div>
-
-    <form action="">
-        <h3>Регистрация</h3>
-        <span>Имя</span>
-        <input type="email" name="" class="box" placeholder="Введите свою почту" id="">
-        <span>Пароль</span>
-        <input type="password" name="" class="box" placeholder="Введите свой пароль" id="">
-        <div class="checkbox">
-            <input type="checkbox" name="" id="remember-me">
-            <label for="remember-me"> Запомнить меня</label>
+    
+        <div class="header-2">
+            <nav class="navbar">
+                <a href="index.html">Главная</a>
+                <a href="products.html">Продукция</a>
+                <a href="featured.html">Рекомендуемые</a>
+                <a href="new_arrivals.html">Новое</a>
+                <a href="reviews.html">Обзоры</a>
+                <a href="blog.html">Блог</a>
+            </nav>
         </div>
-        <input type="submit" value="Зарегистрироваться" class="btn">
-        <p>забыли пароль? <a href="#">Нажми на меня</a></p>
-        <p>У вас нет учетной записи? <a href="#">Создать её</a></p>
-    </form>
-
-</div>
-
+    
+    </header>
+    
+    
+    <nav class="bottom-navbar">
+        <a href="#home" class="fas fa-home"></a>
+        <a href="#featured" class="fas fa-list"></a>
+        <a href="#arrivals" class="fas fa-tags"></a>
+        <a href="#reviews" class="fas fa-comments"></a>
+        <a href="#blogs" class="fas fa-blog"></a>
+    </nav>
+    
+    
+    <div class="login-form-container">
+    
+        <div id="close-login-btn" class="fas fa-times"></div>
+    
+        <form action="">
+            <h3>Регистрация</h3>
+            <span>Имя</span>
+            <input type="email" name="" class="box" placeholder="Введите свою почту" id="">
+            <span>Пароль</span>
+            <input type="password" name="" class="box" placeholder="Введите свой пароль" id="">
+            <div class="checkbox">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me"> Запомнить меня</label>
+            </div>
+            <input type="submit" value="Зарегистрироваться" class="btn">
+            <p>забыли пароль? <a href="#">Нажми на меня</a></p>
+            <p>У вас нет учетной записи? <a href="#">Создать её</a></p>
+        </form>
+    
+    </div>
+    
 
 
 </section>
-<section>
+<!-- <section>
     <div class="moving-image" id="second-image">
     <img src="image/image2.png" alt="image2.png">
 </div>
 <div class="moving-image" id="first-image">
     <img src="image/image1.png" alt="image1.png">
 </div>
-</section>
+</section> -->
 
+<div id="moving-text"></div>
 
-
-
-<div class="sub-products" style="" >
-    <div class="l-fixed">
-    <h3>Другие <span>вкусы</span></h3>
-    <ul>
+<section class="arrivals" id="arrivals">
+<div class="sub1-products">
+    <img class="main-product-image" src="image/book-1.png" alt="Chicken">
+    <div class="l1-fixed">
+        <h3>Другие <span>вкусы</span></h3>
+        <ul>
         
                 <li class="m-mini"><a href="../index.html#">
                         <div class="sub-image"><img src="image/book-1.png"></div>
@@ -153,127 +154,244 @@
     </ul>
     </div>
 </div>
-<div class="sub-wave" style="background:#ece7da"><i style="background-image:url(../upload/catalog_Lines/wave_img/15c69ba24b2442a4164e1da53487f526.png)"></i></div></div>
+</section>
+<!-- <div class="sub-wave" style="background:#ece7da"><i style="background-image:url(../upload/catalog_Lines/wave_img/15c69ba24b2442a4164e1da53487f526.png)"></i></div></div> -->
 
-<section class="featured" id="featured">
-    
-    <h1 class="heading"> <span>Чаще Берут</span> </h1>
-    
-    <div class="swiper featured-slider">
+
+<div class="sub2-products">
+    <img class="main-product-image" src="image/book-1.png" alt="Chicken">
+    <div class="l2-fixed">
+        <h3>Другие <span>вкусы</span></h3>
+        <ul>
         
-        <div class="swiper-wrapper">
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Курица</div>
+                    </a>
+                </li>
             
-            <div class="swiper-slide box">
-                <div class="image">
-                    <img src="image/book-1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Борщ</h3>
-                    <div class="price">100₽ <span>150₽</span></div>
-                    <a href="#" class="btn">Добавить в корзину</a>
-                </div>
-            </div>
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Острая курица</div>
+                    </a>
+                </li>
             
-            <div class="swiper-slide box">
-                <div class="image">
-                    <img src="image/book-1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Суп</h3>
-                    <div class="price">100₽ <span>150₽</span></div>
-                    <a href="#" class="btn">Добавить в корзин</a>
-                </div>
-            </div>
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Кимчи</div>
+                    </a>
+                </li>
+            
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Телятина</div>
+                    </a>
+                </li>
+            
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Свинина</div>
+                    </a>
+                </li>
+            
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Грибы</div>
+                    </a>
+                </li>
+            
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Говядина</div>
+                    </a>
+                </li>
+            
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Морепродукты</div>
+                    </a>
+                </li>
+            
+    </ul>
+    </div>
+</div>
 
-            <div class="swiper-slide box">
-                <div class="image">
-                    <img src="image/book-1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Суп</h3>
-                    <div class="price">100₽ <span>150₽</span></div>
-                    <a href="#" class="btn">Добавить в корзин</a>
-                </div>
-            </div>
+<div class="sub3-products">
+    <img class="main-product-image" src="image/book-1.png" alt="Chicken">
+    <div class="l3-fixed">
+        <h3>Другие <span>вкусы</span></h3>
+        <ul>
+        
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Курица</div>
+                    </a>
+                </li>
             
-            <div class="swiper-slide box">
-                <div class="image">
-                    <img src="image/book-1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Суп</h3>
-                    <div class="price">100₽ <span>150₽</span></div>
-                    <a href="#" class="btn">Добавить в корзин</a>
-                </div>
-            </div>
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Острая курица</div>
+                    </a>
+                </li>
             
-            <div class="swiper-slide box">
-                <div class="image">
-                    <img src="image/book-1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Суп</h3>
-                    <div class="price">100₽ <span>150₽</span></div>
-                    <a href="#" class="btn">Добавить в корзин</a>
-                </div>
-            </div>
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Кимчи</div>
+                    </a>
+                </li>
             
-            <div class="swiper-slide box">
-                <div class="image">
-                    <img src="image/book-1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Суп</h3>
-                    <div class="price">100₽ <span>150₽</span></div>
-                    <a href="#" class="btn">Добавить в корзин</a>
-                </div>
-            </div>
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Телятина</div>
+                    </a>
+                </li>
+            
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Свинина</div>
+                    </a>
+                </li>
+            
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Грибы</div>
+                    </a>
+                </li>
+            
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Говядина</div>
+                    </a>
+                </li>
+            
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Морепродукты</div>
+                    </a>
+                </li>
+            
+    </ul>
+    </div>
+</div>
 
-            <div class="swiper-slide box">
-                <div class="image">
-                    <img src="image/book-1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Суп</h3>
-                    <div class="price">100₽ <span>150₽</span></div>
-                    <a href="#" class="btn">Добавить в корзин</a>
-                </div>
-            </div>
-            
-            <div class="swiper-slide box">
-                <div class="image">
-                    <img src="image/book-1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Суп</h3>
-                    <div class="price">100₽ <span>150₽</span></div>
-                    <a href="#" class="btn">Добавить в корзин</a>
-                </div>
-            </div>
 
-            <div class="swiper-slide box">
-                <div class="image">
-                    <img src="image/book-1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Суп</h3>
-                    <div class="price">100₽ <span>150₽</span></div>
-                    <a href="#" class="btn">Добавить в корзин</a>
-                </div>
-            </div>
+<div class="sub4-products">
+    <img class="main-product-image" src="image/book-1.png" alt="Chicken">
+    <div class="l4-fixed">
+        <h3>Другие <span>вкусы</span></h3>
+        <ul>
+        
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Курица</div>
+                    </a>
+                </li>
             
-            <div class="swiper-slide box">
-                <div class="image">
-                    <img src="image/book-1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Суп</h3>
-                    <div class="price">100₽ <span>150₽</span></div>
-                    <a href="#" class="btn">Добавить в корзин</a>
-                </div>
-            </div>
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Острая курица</div>
+                    </a>
+                </li>
             
-        </div>
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Кимчи</div>
+                    </a>
+                </li>
+            
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Телятина</div>
+                    </a>
+                </li>
+            
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Свинина</div>
+                    </a>
+                </li>
+            
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Грибы</div>
+                    </a>
+                </li>
+            
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Говядина</div>
+                    </a>
+                </li>
+            
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Морепродукты</div>
+                    </a>
+                </li>
+            
+    </ul>
+    </div>
+</div>
+
+
+<div class="sub5-products">
+    <img class="main-product-image" src="image/book-1.png" alt="Chicken">
+    <div class="l5-fixed">
+        <h3>Другие <span>вкусы</span></h3>
+        <ul>
+        
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Курица</div>
+                    </a>
+                </li>
+            
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Острая курица</div>
+                    </a>
+                </li>
+            
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Кимчи</div>
+                    </a>
+                </li>
+            
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Телятина</div>
+                    </a>
+                </li>
+            
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Свинина</div>
+                    </a>
+                </li>
+            
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Грибы</div>
+                    </a>
+                </li>
+            
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Говядина</div>
+                    </a>
+                </li>
+            
+                <li class="m-mini"><a href="../index.html#">
+                        <div class="sub-image"><img src="image/book-1.png"></div>
+                        <div class="sub-name">Морепродукты</div>
+                    </a>
+                </li>
+            
+    </ul>
+    </div>
+</div>
+
         
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
@@ -284,7 +402,7 @@
 
 
 
-<section class="footer">
+<!-- <section class="footer">
 
     <div class="box-container">
 
@@ -323,18 +441,25 @@
             <a href="#"> <i class="fas fa-envelope"></i> kalsin.ger@mail.ru </a>
             <img src="image/worldmap.png" class="map" alt="">
         </div>
-        
+         -->
     </div>
+    <section class="footer">
 
-    <div class="share">
-        <a href="#" class="fab fa-facebook-f"></a>
-        <a href="#" class="fab fa-twitter"></a>
-        <a href="#" class="fab fa-instagram"></a>
-    </div>
+        <div class="box-container">
 
-    <div class="credit"> Создал <span>Jordan-Ger</span> | Все права защищены! </div>
-
-</section>
+    
+    
+        </div>
+    
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+        </div>
+    
+        <div class="credit"> Создал <span>Jordan-Ger</span> | Все права защищены! </div>
+    
+    </section>
 
 <!-- Экран загрузки --!
 <div class="loader-container">
@@ -342,11 +467,6 @@
 </div>
 -->
 
-<script src="js/scrollAnimation.js"></script>
-
-<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-
-<script src="js/transition.js"></script>
 
 </body>
 </html>

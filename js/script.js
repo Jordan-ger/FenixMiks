@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', function() {
+
 searchForm = document.querySelector('.search-form');
 
 document.querySelector('#search-btn').onclick = () =>{
@@ -167,4 +169,5 @@ document.addEventListener('mousemove', function(e) {
   const y = e.clientY;
   movingText.style.left = x + 'px';
   movingText.style.top = y + 'px';
+});
 });

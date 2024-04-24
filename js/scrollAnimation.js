@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', function() {
+
 let firstImage = document.getElementById("first-image");
 let secondImage = document.getElementById("second-image");
 
@@ -25,6 +27,14 @@ function handleScroll() {
     secondImage.style.transform = `translateY(${scrollPosition * 1}px)`;
 }
 
+document.addEventListener('mousemove', function(e) {
+  const movingText = document.getElementById('moving-text');
+  const x = e.clientX;
+  const y = e.clientY;
+  movingText.style.left = x + 'px';
+  movingText.style.top = y + 'px';
+});
+
 window.addEventListener("scroll", handleScroll);
 
 const movingImages = document.querySelectorAll('.moving-image');
@@ -39,5 +49,7 @@ movingImages.forEach(image => {
       top: 0,
       behavior: 'smooth'
     });
+    
   });
-});
+})});
+
