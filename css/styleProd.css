@@ -88,6 +88,33 @@ section{
     background:var(--dark-color);
 }
 
+.header .header-1 .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:black;
+    
+}
+
+.header .header-1 .logo i{
+    color:var(--green);
+}
+
+.header .header-1 .logo-image {
+    height: 70px; /* Задайте желаемую высоту логотипа */
+     /* Добавьте отступ между логотипом и текстом */
+}
+
+.header .header-1 .search-form{
+    width:50rem;
+    height:4rem;
+    border:var(--border);
+    overflow: hidden;
+    background:#fff;
+    display:flex;
+    align-items: center;
+    border-radius: .5rem;
+}
+
 .header .header-1{
     background:#fff;
     padding:1px 9%;
@@ -99,7 +126,8 @@ section{
 .header .header-1 .logo{
     font-size: 2.5rem;
     font-weight: bolder;
-    color:var(--black);
+    color:black;
+    
 }
 
 .header .header-1 .logo i{
@@ -156,10 +184,12 @@ section{
 
 .header .header-2{
     background:var(--green);
+    
 }
 
 .header .header-2 .navbar{
     text-align: center;
+    
 }
 
 .header .header-2 .navbar a{
@@ -167,6 +197,7 @@ section{
     display: inline-block;
     padding:1rem;
     font-size: 1.5rem;
+    
 }
 
 .header .header-2 .navbar a:hover{
@@ -203,7 +234,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
-    background:rgba(255,255,255,.9);
+    backdrop-filter: blur(5px);
     position:fixed;
     top:0; right:-105%;
     z-index: 10000;
@@ -216,7 +247,7 @@ section{
 }
 
 .login-form-container form{
-    background:#fff;
+    backdrop-filter: blur(5px);
     border:var(--border);
     width:40rem;
     padding:2rem;
@@ -316,13 +347,13 @@ section{
     margin-top: 14rem;
 }
 
-.home .row .books-slider a img{
+/* .home .row .books-slider a img{
     height: 25rem;
 }
 
 .home .row .books-slider a:hover img{
     transform: scale(.9);
-}
+} */
 
 
 
@@ -422,15 +453,15 @@ section{
     animation: moveUpDown 2s ease-in-out infinite; 
   }
   
-  footer {
+  .footer {
     position: fixed;
     bottom: 0;
-    right: 0;
+    width: 100%;
     font-size: 13px;
-    background: #DDD;
+    background: #ffffff;
     padding: 5px 10px;
     margin: 5px;
-  }
+}
   
 
 
@@ -988,6 +1019,7 @@ loader
         display:none;
     }
 
+
     .bottom-navbar{
         display: block;
     }
@@ -1040,31 +1072,34 @@ loader
 }
 
 section.arrivals {
-    margin: 0 -11%;
+    margin: 0 -9.5%;
 }
 
 .sub1-products {
     background: url(../image/kosmo1.png) no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 20px; /* Добавьте отступы по вашему усмотрению */
-    position: relative; /* Позиционируем блок относительно содержимого */
+    padding: 250px; 
+
+    z-index: -1;
 }
 
 .sub1-products .l-fixed {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 10 auto;
 }
 
 .sub1-products h3 {
-    font-size: 24px;
+    font-size: 35px;
     color: #ffffff;
     margin-bottom: 20px;
+    padding-left: 150px;
 }
 
 .sub1-products h3 span {
     font-weight: bold;
     color: #ff6600;
+    
 }
 
 .sub1-products ul {
@@ -1072,9 +1107,9 @@ section.arrivals {
     margin: 0;
     padding: 0;
     display: flex; /* Располагаем элементы в строку */
-    justify-content: space-between; /* Распределяем элементы по ширине */
+    justify-content:center ; /* Распределяем элементы по ширине */
     flex-wrap: wrap; /* Разрешаем перенос элементов на следующую строку */
-    margin-bottom: 20px; /* Добавьте отступы по вашему усмотрению */
+    margin-bottom: 30px; /* Добавьте отступы по вашему усмотрению */
 }
 
 .sub1-products li {
@@ -1083,10 +1118,20 @@ section.arrivals {
 }
 
 .sub1-products .sub-image img {
-    width: 100%; /* Задайте размер изображения по вашему усмотрению */
+    width: 70%; /* Задайте размер изображения по вашему усмотрению */
     height: auto; /* Автоматический расчет высоты */
+    border: 1px solid transparent; /* Прозрачный бордер по умолчанию */
+    border-radius: 10px; /* Закругление углов на 10px */
+    transition: border 0.3s ease; /* Плавный переход для бордера */
 }
 
+.sub1-products .sub-image img:hover {
+    border: 1px solid #59523e; /* Цветной бордер при наведении */
+}
+
+.sub1-products .sub-image img:active {
+    border: 2px solid #59523e; /* Более толстый цветной бордер при нажатии */
+}
 
 .sub1-products .sub-name {
     display: flex;
@@ -1094,7 +1139,7 @@ section.arrivals {
     padding: 20px; /* Добавьте отступы по вашему усмотрению */
     cursor: pointer;
     width: calc(10% - 20px); /* Распределение элементов в строке */
-    margin-right: 20px; /* Отступ между элементами */
+    margin-right: 30px; /* Отступ между элементами */
 	color:white;
 	font-size: 18px;
 }
@@ -1145,12 +1190,37 @@ section.arrivals {
   }
   
   
-  .sub1-products .l1-fixed {
-	background-image: url(../image/kosmo2.png); 
+  .sub1-products {
+    position: relative;
+}
+
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+}
+.l1-fixed {
+    background-image: url(../image/kosmo2.png);
     background-size: cover;
     background-position: center;
-	margin: 0 0%;
+    width: 260rem;
+    height: 46rem;
+    
+}
+
+.content-container {
+    position: relative;
+    
 }
 .section .arrivals {
-    margin: 0 -11%;
+    margin: 0 -1%;
+}
+
+.product-image {
+    width: 12rem;
+    cursor: pointer;
 }

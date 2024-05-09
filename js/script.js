@@ -16,16 +16,16 @@ document.querySelector('#close-login-btn').onclick = () =>{
   loginForm.classList.remove('active');
 }
 
-window.onscroll = () =>{
+window.onscroll = () => {
+  const header = document.querySelector('.header .header-2');
+  const barrier = 300; // Измените это значение на нужное вам
 
-  searchForm.classList.remove('active');
-
-  if(window.scrollY > 80){
-    document.querySelector('.header .header-2').classList.add('active');
-  }else{
-    document.querySelector('.header .header-2').classList.remove('active');
+  // Проверяем, находится ли пользователь выше барьера
+  if (window.scrollY <= barrier) {
+    header.classList.remove('active'); // Удаляем класс active, если пользователь находится выше барьера
+  } else {
+    header.classList.add('active'); // Добавляем класс active, если пользователь прокрутил страницу ниже барьера
   }
-
 }
 
 window.onload = () =>{

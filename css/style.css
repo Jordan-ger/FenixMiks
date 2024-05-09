@@ -98,7 +98,8 @@ section{
 .header .header-1 .logo{
     font-size: 2.5rem;
     font-weight: bolder;
-    color:var(--black);
+    color:black;
+    
 }
 
 .header .header-1 .logo i{
@@ -155,10 +156,12 @@ section{
 
 .header .header-2{
     background:var(--green);
+    
 }
 
 .header .header-2 .navbar{
     text-align: center;
+    
 }
 
 .header .header-2 .navbar a{
@@ -166,6 +169,7 @@ section{
     display: inline-block;
     padding:1rem;
     font-size: 1.5rem;
+    
 }
 
 .header .header-2 .navbar a:hover{
@@ -309,6 +313,60 @@ section{
     overflow: hidden;
 } */
 
+.blurry-background {
+
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    border: var(--border); /* замените на ваше значение */
+    margin: 1rem 0;
+    backdrop-filter: blur(5px); /* размытие заднего фона */
+    max-width: 30%;
+    right:100px;
+    border: 2px solid rgba(148, 146, 146, 0.767);
+    border-radius: 10px;
+    padding: 20px;
+    justify-content: flex-start;
+    margin-left: 23%; /* передвинуть влево на 10% */
+    font-size: 20px; /* размер текста */
+    font-family: Arial, sans-serif;
+    position: relative;
+    top: -290px;
+}
+
+
+
+.blurry-background .content p {
+    color: #ffffff; /* цвет текста */
+    font-size: 24px; /* увеличение размера текста */
+    line-height: 1.6; /* высота строки */
+    font-family: 'Georgia', serif; /* высота строки */
+    
+}
+
+.second-blurry-background {
+    position: absolute;
+    top: 285px; /* смещаем блок вниз */
+    left: calc(175px + 30% + 50px); /* смещаем блок вправо, учитывая ширину первого блока и отступ */
+    padding: 20px; /* добавляем отступы внутри блока */
+    border: 2px solid rgba(255, 255, 255, 0.767); /* добавляем обводку */
+    border-radius: 10px; /* закругляем углы */
+    backdrop-filter: blur(5px); /* размытие заднего фона */
+    max-width: 28%; /* ширина блока */
+    font-size: 20px; /* размер текста */
+    font-family: Arial, sans-serif; /* выберите шрифт */
+
+}
+
+.second-blurry-background .content p {
+    color: #c9bd1e; /* цвет текста */
+    font-size: 24px; /* увеличение размера текста */
+    line-height: 1.6; /* высота строки */
+    font-family: 'Georgia', serif; /* выберите шрифт */
+}
+
+
+
 .home .row .books-slider{
     flex:1 1 42rem;
     text-align: center;
@@ -403,7 +461,7 @@ section{
     -webkit-text-stroke: 2px rgb(218, 215, 215);
     position: relative;
     margin-top: -4.8em;
-    margin-left: 1em;
+    margin-left: 3em;
   }
 
   #moving-text .text3d-3:before {
@@ -446,6 +504,7 @@ section{
     background: #DDD;
     padding: 5px 10px;
     margin: 5px;
+    
   }
   
 
@@ -891,6 +950,7 @@ section{
     background-position: center;
     width: 100%;
     height: 50%;
+    box-shadow: 0px -4px 15px rgba(0, 0, 0, 0.5);
     
 }
 
@@ -950,6 +1010,14 @@ loader
 .footer .share a:hover{
     background:var(--black);
 }
+
+.header .header-1 .logo-image {
+    height: 70px; /* Задайте желаемую высоту логотипа */
+     /* Добавьте отступ между логотипом и текстом */
+}
+
+
+
 
 .footer .credit{
     border-top: var(--border);
@@ -1074,4 +1142,16 @@ loader
 
 section.arrivals {
     margin:0 -11%;
+}
+
+
+.new-products{
+color: white;
+font-size: 24px;
+text-align: center;
+text-transform: none;
+}
+
+.new-products h3, .new-products h1, .new-products p {
+    text-transform: none;
 }

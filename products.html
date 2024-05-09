@@ -13,6 +13,7 @@
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/transition.js"></script>
     <script src="js/script.js"></script>
+    
 
 </head>
 <body>
@@ -22,7 +23,7 @@
 
         <div class="header-1">
     
-            <a href="#" class="logo"></i> FenixMiks </a>
+            
     
             <!-- <form action="" class="search-form">
                 <input type="search" name="" placeholder="search here..." id="search-box">
@@ -30,10 +31,10 @@
             </form> -->
     
             <div class="icons">
-                <div id="search-btn" class="fas fa-search"></div>
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <div id="login-btn" class="fas fa-user"></div>
+                <div id="search-btn" class=""></div>
+                
+                
+                <div id="login-btn" class=""></div>
             </div>
     
         </div>
@@ -42,10 +43,9 @@
             <nav class="navbar">
                 <a href="index.html">Главная</a>
                 <a href="products.html">Продукция</a>
-                <a href="featured.html">Рекомендуемые</a>
-                <a href="new_arrivals.html">Новое</a>
-                <a href="reviews.html">Обзоры</a>
-                <a href="blog.html">Блог</a>
+                <a href="featured.html">О нас</a>
+                <a href="new_arrivals.html">Контакты</a>
+                <a href="reviews.html">Доставка</a>
             </nav>
         </div>
     
@@ -65,9 +65,9 @@
     
         <div id="close-login-btn" class="fas fa-times"></div>
     
-        <form action="">
+        <!-- <form action="">
             <h3>Регистрация</h3>
-            <span>Имя</span>
+            <span>Почта</span>
             <input type="email" name="" class="box" placeholder="Введите свою почту" id="">
             <span>Пароль</span>
             <input type="password" name="" class="box" placeholder="Введите свой пароль" id="">
@@ -78,7 +78,7 @@
             <input type="submit" value="Зарегистрироваться" class="btn">
             <p>забыли пароль? <a href="#">Нажми на меня</a></p>
             <p>У вас нет учетной записи? <a href="#">Создать её</a></p>
-        </form>
+        </form> -->
     
     </div>
     
@@ -94,71 +94,34 @@
 </div>
 </section> -->
 
-<div id="moving-text"></div>
-
-<section class="arrivals" id="arrivals">
 <div class="sub1-products">
-    <img class="main-product-image" src="image/book-1.png" alt="Chicken">
-    <div class="l1-fixed">
-        <h3>Другие <span>вкусы</span></h3>
-        <ul>
-        
-                <li class="m-mini"><a href="../index.html#">
-                        <div class="sub-image"><img src="image/book-1.png"></div>
-                        <div class="sub-name">Курица</div>
-                    </a>
-                </li>
-            
-                <li class="m-mini"><a href="../index.html#">
-                        <div class="sub-image"><img src="image/book-1.png"></div>
-                        <div class="sub-name">Острая курица</div>
-                    </a>
-                </li>
-            
-                <li class="m-mini"><a href="../index.html#">
-                        <div class="sub-image"><img src="image/book-1.png"></div>
-                        <div class="sub-name">Кимчи</div>
-                    </a>
-                </li>
-            
-                <li class="m-mini"><a href="../index.html#">
-                        <div class="sub-image"><img src="image/book-1.png"></div>
-                        <div class="sub-name">Телятина</div>
-                    </a>
-                </li>
-            
-                <li class="m-mini"><a href="../index.html#">
-                        <div class="sub-image"><img src="image/book-1.png"></div>
-                        <div class="sub-name">Свинина</div>
-                    </a>
-                </li>
-            
-                <li class="m-mini"><a href="../index.html#">
-                        <div class="sub-image"><img src="image/book-1.png"></div>
-                        <div class="sub-name">Грибы</div>
-                    </a>
-                </li>
-            
-                <li class="m-mini"><a href="../index.html#">
-                        <div class="sub-image"><img src="image/book-1.png"></div>
-                        <div class="sub-name">Говядина</div>
-                    </a>
-                </li>
-            
-                <li class="m-mini"><a href="../index.html#">
-                        <div class="sub-image"><img src="image/book-1.png"></div>
-                        <div class="sub-name">Морепродукты</div>
-                    </a>
-                </li>
-            
-    </ul>
+    <div class="background-container">
+        <div class="main-product" id="main-product">Название продукта</div>
+        <img class="main-product-image" id="main-product-image" src="image/book-1.png" alt="Chicken">
+        <div class="l1-fixed">
+            <h3>Другие <span>вкусы</span></h3>
+            <ul>
+                <!-- Изменена ссылка на маленькую картинку "book-1mini" -->
+                <li class="m-mini"><a href="#" onclick="changeMainProduct('image/book-1mini.png')"><img class="product-image" src="image/book-1mini.png" alt="book-1mini"></a></li>
+                <li class="m-mini"><a href="#" onclick="changeMainProduct('image/book-2.png')"><img class="product-image" src="image/book-2.png" alt="Суп Солянка"></a></li>
+                <li class="m-mini"><a href="#" onclick="changeMainProduct('image/book-3.png')"><img class="product-image" src="image/book-3.png" alt="Кимчи"></a></li>
+                <li class="m-mini"><a href="#" onclick="changeMainProduct('image/book-4.png')"><img class="product-image" src="image/book-4.png" alt="Телятина"></a></li>
+                <li class="m-mini"><a href="#" onclick="changeMainProduct('image/book-5.png')"><img class="product-image" src="image/book-5.png" alt="Свинина"></a></li>
+                <li class="m-mini"><a href="#" onclick="changeMainProduct('image/book-6.png')"><img class="product-image" src="image/book-6.png" alt="Грибы"></a></li>
+                <li class="m-mini"><a href="#" onclick="changeMainProduct('image/book-7.png')"><img class="product-image" src="image/book-7.png" alt="Говядина"></a></li>
+                <li class="m-mini"><a href="#" onclick="changeMainProduct('image/book-8.png')"><img class="product-image" src="image/book-8.png" alt="Морепродукты"></a></li>
+                <li class="m-mini"><a href="#" onclick="changeMainProduct('image/book-9.png')"><img class="product-image" src="image/book-9.png" alt="Овощи"></a></li>
+                <li class="m-mini"><a href="#" onclick="changeMainProduct('image/book-10.png')"><img class="product-image" src="image/book-10.png" alt="Фрукты"></a></li>
+            </ul>
+        </div>
     </div>
 </div>
-</section>
+  
+  
 <!-- <div class="sub-wave" style="background:#ece7da"><i style="background-image:url(../upload/catalog_Lines/wave_img/15c69ba24b2442a4164e1da53487f526.png)"></i></div></div> -->
 
 
-<div class="sub2-products">
+<!-- <div class="sub2-products">
     <img class="main-product-image" src="image/book-1.png" alt="Chicken">
     <div class="l2-fixed">
         <h3>Другие <span>вкусы</span></h3>
@@ -399,7 +362,7 @@
     </div>
 </section>
     
-
+ -->
 
 
 <!-- <section class="footer">
@@ -442,7 +405,7 @@
             <img src="image/worldmap.png" class="map" alt="">
         </div>
          -->
-    </div>
+    <!-- </div> -->
     <section class="footer">
 
         <div class="box-container">
