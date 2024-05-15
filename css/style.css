@@ -313,6 +313,74 @@ section{
     overflow: hidden;
 } */
 
+.video-background {
+    position: relative;
+    width: 100%; /* Замените на нужную ширину */
+    height: 00px; /* Замените на нужную высоту */
+}
+
+.video-wrap {
+    position: absolute;
+    top: -500px;
+    right: 16rem; /* Помещаем блок справа */
+    width: 80rem; /* Задаем ширину видео блока */
+    height: 36.5rem; /* Задаем высоту видео блока */
+    /* Скрытие лишних частей видео, если они будут */
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.video-wrap iframe {
+    width: 100%; /* Подстраиваем ширину iframe под блок */
+    height: 100%; /* Подстраиваем высоту iframe под блок */
+}
+
+.blurry-background1 {
+
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    border: var(--border); /* замените на ваше значение */
+    margin: 1rem 0;
+    backdrop-filter: blur(5px); /* размытие заднего фона */
+    max-width: 30%;
+    right:100px;
+    border: 2px solid rgba(148, 146, 146, 0.767);
+    border-radius: 10px;
+    padding: 20px;
+    justify-content: flex-start;
+    margin-left: 1rem; /* передвинуть влево на 10% */
+    font-size: 20px; /* размер текста */
+    font-family: Arial, sans-serif;
+    position: absolute;
+    top: 345px;
+    left: 31.3rem;
+}
+
+
+
+.blurry-background1 .content p {
+    color: #ffffff; /* цвет текста */
+    font-size: 24px; /* увеличение размера текста */
+    line-height: 1.6; /* высота строки */
+    font-family: 'Georgia', serif; /* высота строки */
+    
+}
+
+.second-blurry-background1 {
+    position: absolute;
+    top: 285px; /* смещаем блок вниз */
+    left: calc(175px + 30% + 50px); /* смещаем блок вправо, учитывая ширину первого блока и отступ */
+    padding: 20px; /* добавляем отступы внутри блока */
+    border: 2px solid rgba(255, 255, 255, 0.767); /* добавляем обводку */
+    border-radius: 10px; /* закругляем углы */
+    backdrop-filter: blur(5px); /* размытие заднего фона */
+    max-width: 28%; /* ширина блока */
+    font-size: 20px; /* размер текста */
+    font-family: Arial, sans-serif; /* выберите шрифт */
+
+}
+
 .blurry-background {
 
     align-items: center;
