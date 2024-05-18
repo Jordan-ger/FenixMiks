@@ -322,10 +322,10 @@ section{
 
 .video-wrap {
     position: absolute;
-    top: -500px;
+    top: -375px;
     right: 16rem; /* Помещаем блок справа */
     width: 80rem; /* Задаем ширину видео блока */
-    height: 36.5rem; /* Задаем высоту видео блока */
+    height: 36.7rem; /* Задаем высоту видео блока */
     /* Скрытие лишних частей видео, если они будут */
     border-radius: 20px;
     overflow: hidden;
@@ -336,50 +336,49 @@ section{
     height: 100%; /* Подстраиваем высоту iframe под блок */
 }
 
-.blurry-background1 {
+.container-home .blurry-background1 {
 
     align-items: center;
     gap: 1.5rem;
     padding: 2rem 1rem;
-    border: var(--border); /* замените на ваше значение */
+    border: var(--border); 
     margin: 1rem 0;
-    backdrop-filter: blur(5px); /* размытие заднего фона */
+    backdrop-filter: blur(5px); 
     max-width: 30%;
     right:100px;
     border: 2px solid rgba(148, 146, 146, 0.767);
     border-radius: 10px;
     padding: 20px;
     justify-content: flex-start;
-    margin-left: 1rem; /* передвинуть влево на 10% */
-    font-size: 20px; /* размер текста */
+    margin-left: 1rem; 
+    font-size: 20px; 
     font-family: Arial, sans-serif;
-    position: absolute;
-    top: 345px;
-    left: 31.3rem;
+    margin-top: -295px;
+    margin-left: 336px;
 }
 
 
 
 .blurry-background1 .content p {
-    color: #ffffff; /* цвет текста */
-    font-size: 24px; /* увеличение размера текста */
-    line-height: 1.6; /* высота строки */
-    font-family: 'Georgia', serif; /* высота строки */
+    color: #ffffff; 
+    font-size: 24px; 
+    line-height: 1.6; 
+    font-family: 'Georgia', serif; 
     
 }
 
 .second-blurry-background1 {
-    position: absolute;
-    top: 285px; /* смещаем блок вниз */
-    left: calc(175px + 30% + 50px); /* смещаем блок вправо, учитывая ширину первого блока и отступ */
-    padding: 20px; /* добавляем отступы внутри блока */
-    border: 2px solid rgba(255, 255, 255, 0.767); /* добавляем обводку */
-    border-radius: 10px; /* закругляем углы */
-    backdrop-filter: blur(5px); /* размытие заднего фона */
-    max-width: 28%; /* ширина блока */
-    font-size: 20px; /* размер текста */
-    font-family: Arial, sans-serif; /* выберите шрифт */
-
+    top: 285px; 
+    left: calc(175px + 30% + 50px); 
+    padding: 20px; 
+    border: 2px solid rgba(255, 255, 255, 0.767); 
+    border-radius: 10px; 
+    backdrop-filter: blur(5px); 
+    max-width: 28%; 
+    font-size: 20px; 
+    font-family: Arial, sans-serif; 
+    z-index: 1000; 
+    background: rgba(255, 255, 255, 0.8); 
 }
 
 .blurry-background {
@@ -497,8 +496,8 @@ section{
 }
 
 #second-image {
-    right: 9rem; 
-    margin-top: 10px;
+    right: 8rem; 
+    margin-top: 22px;
     top: 12rem; 
 }
 
@@ -863,12 +862,18 @@ section{
 }
 
 .arrivals .arrivals-slider .box .image img {
-    height: 15rem;
+    height: 18rem;
 
 }
 
 .arrivals .arrivals-slider .box .content h3 {
     font-size: 2rem;
+    color: var(--black);
+    color:#ffffff;
+}
+
+.arrivals .arrivals-slider .box .content h2 {
+    font-size: 1.5rem;
     color: var(--black);
     color:rgb(255, 255, 255);
 }

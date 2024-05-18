@@ -62,3 +62,10 @@ document.addEventListener('mousemove', function (e) {
 function changeMainProduct(newImage) {
   document.querySelector('.main-product-image').src = newImage;
 }
+
+
+function changeImage(imageSrc, mainDescription, additionalDescription) {
+    document.getElementById('mainImage').src = imageSrc;
+    document.getElementById('description').innerText = mainDescription;
+    document.getElementById('additionalDescription').innerText = additionalDescription;
+}

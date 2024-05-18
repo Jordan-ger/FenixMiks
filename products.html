@@ -90,30 +90,78 @@
     <img src="image/image1.png" alt="image1.png">
 </div>
 </section> -->
-
-<div class="sub1-products">
-    <div class="background-container">
-        <div class="main-product" id="main-product">Название продукта</div>
-        <img class="main-product-image" id="main-product-image" src="image/book-1.png" alt="Chicken">
-        <div class="l1-fixed">
-            <h3>Другие <span>вкусы</span></h3>
-            <ul>
-                <!-- Изменена ссылка на маленькую картинку "book-1mini" -->
-                <li class="m-mini"><a href="#" onclick="changeMainProduct('image/book-1mini.png')"><img class="product-image" src="image/book-1mini.png" alt="book-1mini"></a></li>
-                <li class="m-mini"><a href="#" onclick="changeMainProduct('image/book-2.png')"><img class="product-image" src="image/book-2.png" alt="Суп Солянка"></a></li>
-                <li class="m-mini"><a href="#" onclick="changeMainProduct('image/book-3.png')"><img class="product-image" src="image/book-3.png" alt="Кимчи"></a></li>
-                <li class="m-mini"><a href="#" onclick="changeMainProduct('image/book-4.png')"><img class="product-image" src="image/book-4.png" alt="Телятина"></a></li>
-                <li class="m-mini"><a href="#" onclick="changeMainProduct('image/book-5.png')"><img class="product-image" src="image/book-5.png" alt="Свинина"></a></li>
-                <li class="m-mini"><a href="#" onclick="changeMainProduct('image/book-6.png')"><img class="product-image" src="image/book-6.png" alt="Грибы"></a></li>
-                <li class="m-mini"><a href="#" onclick="changeMainProduct('image/book-7.png')"><img class="product-image" src="image/book-7.png" alt="Говядина"></a></li>
-                <li class="m-mini"><a href="#" onclick="changeMainProduct('image/book-8.png')"><img class="product-image" src="image/book-8.png" alt="Морепродукты"></a></li>
-                <li class="m-mini"><a href="#" onclick="changeMainProduct('image/book-9.png')"><img class="product-image" src="image/book-9.png" alt="Овощи"></a></li>
-                <li class="m-mini"><a href="#" onclick="changeMainProduct('image/book-10.png')"><img class="product-image" src="image/book-10.png" alt="Фрукты"></a></li>
-            </ul>
+<h1 class="heading"> <span>Не Требующие варки</span> </h1>
+<div class="gallery">
+    <div id="description" class="description">Борщь сублимированный</div>
+    <h2>Состав</h2>
+    <div id="additionalDescription" class="description1">Дополнительное описание</div>
+    <div class="main-image-container">
+        <img id="mainImage" class="main-image" src="../image/book-1.png" alt="Main Image">
+    </div>
+    <div class="thumbnails">
+        <div class="flavors-label">Другие вкусы</div>
+        <div class="thumbnail-item">
+            <div class="thumbnail-title">Борщь</div>
+            <img class="thumbnail" src="../image/book-1.png" alt="Thumbnail 1" onclick="changeImage('../image/book-1.png', 'Борщь сублимированный', 'Дополнительное описание3')">
+        </div>
+        <div class="thumbnail-item">
+            <div class="thumbnail-title">Солянка</div>
+            <img class="thumbnail" src="../image/book-2.png" alt="Thumbnail 2" onclick="changeImage('../image/book-2.png', 'Суп Солянка', 'Дополнительное описание1')">
+        </div>
+        <div class="thumbnail-item">
+            <div class="thumbnail-title">Суп Грибной</div>
+            <img class="thumbnail" src="../image/book-2.png" alt="Thumbnail 2" onclick="changeImage('../image/book-2.png', 'Суп Грибной', 'Дополнительное описание3')">
+        </div>
+        <div class="thumbnail-item">
+            <div class="thumbnail-title">Суп Гороховый</div>
+            <img class="thumbnail" src="../image/book-1.png" alt="Thumbnail 1" onclick="changeImage('../image/book-1.png', 'Суп Гороховый', 'Дополнительное описание3')">
+        </div>
+        <div class="thumbnail-item">
+            <div class="thumbnail-title">Том-ям</div>
+            <img class="thumbnail" src="../image/book-2.png" alt="Thumbnail 2" onclick="changeImage('../image/book-2.png', 'Том-ям', 'Дополнительное описание1')">
+        </div>
+        <div class="thumbnail-item">
+            <div class="thumbnail-title">Харчо</div>
+            <img class="thumbnail" src="../image/book-2.png" alt="Thumbnail 2" onclick="changeImage('../image/book-2.png', 'Харчо', 'Дополнительное описание3')">
+        </div>
+        <div class="thumbnail-item">
+            <div class="thumbnail-title">Каша Гречневая</div>
+            <img class="thumbnail" src="../image/book-2.png" alt="Thumbnail 2" onclick="changeImage('../image/book-2.png', 'Каша Гречневая', 'Дополнительное описание3')">
+        </div>
+        <div class="thumbnail-item">
+            <div class="thumbnail-title">Пюре</div>
+            <img class="thumbnail" src="../image/book-1.png" alt="Thumbnail 1" onclick="changeImage('../image/book-1.png', 'Пюре', 'Дополнительное описание3')">
+        </div>
+        <div class="thumbnail-item">
+            <div class="thumbnail-title">ФО-БО</div>
+            <img class="thumbnail" src="../image/book-2.png" alt="Thumbnail 2" onclick="changeImage('../image/book-2.png', 'ФО-БО', 'Дополнительное описание1')">
+        </div>
+        <div class="thumbnail-item">
+            <div class="thumbnail-title">Щи</div>
+            <img class="thumbnail" src="../image/book-2.png" alt="Thumbnail 2" onclick="changeImage('../image/book-2.png', 'Щи', 'Дополнительное описание3')">
         </div>
     </div>
 </div>
   
+<!-- <h1 class="heading1"> <span>Не Требующие варки</span> </h1>
+<div class="gallery">
+    <div id="description" class="description">Борщь сублимированный</div>
+    <div class="main-image-container">
+        <img id="mainImage" class="main-image" src="../image/book-1.png" alt="Main Image">
+    </div>
+    <div class="thumbnails">
+        <img class="thumbnail" src="../image/book-1.png" alt="Thumbnail 1" onclick="changeImage('../image/book-1.png', 'Борщь сублимированный')">
+        <img class="thumbnail" src="../image/book-2.png" alt="Thumbnail 2" onclick="changeImage('../image/book-2.png', 'Описание изображения 2')">
+        <img class="thumbnail" src="../image/book-1.png" alt="Thumbnail 3" onclick="changeImage('../image/book-1.png', 'Описание изображения 9')">
+        <img class="thumbnail" src="../image/book-1.png" alt="Thumbnail 4" onclick="changeImage('../image/book-1.png', 'Описание изображения 9')">
+        <img class="thumbnail" src="../image/book-1.png" alt="Thumbnail 5" onclick="changeImage('../image/book-1.png', 'Описание изображения 9')">
+        <img class="thumbnail" src="images/thumb6.jpg" alt="Thumbnail 6" onclick="changeImage('images/image6.jpg')">
+        <img class="thumbnail" src="images/thumb7.jpg" alt="Thumbnail 7" onclick="changeImage('images/image7.jpg')">
+        <img class="thumbnail" src="images/thumb8.jpg" alt="Thumbnail 8" onclick="changeImage('images/image8.jpg')">
+        <img class="thumbnail" src="images/thumb9.jpg" alt="Thumbnail 9" onclick="changeImage('images/image9.jpg')">
+        <img class="thumbnail" src="images/thumb10.jpg" alt="Thumbnail 10" onclick="changeImage('images/image10.jpg')">
+    </div>
+</div> -->
   
 <!-- <div class="sub-wave" style="background:#ece7da"><i style="background-image:url(../upload/catalog_Lines/wave_img/15c69ba24b2442a4164e1da53487f526.png)"></i></div></div> -->
 
