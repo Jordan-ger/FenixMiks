@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
   function handleScroll() {
       let scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
-      // Убедимся, что фиксированные элементы не изменяются
       if (!firstImage.classList.contains('fixed')) {
           firstImage.style.transform = `translateY(${scrollPosition * 1}px)`;
       }

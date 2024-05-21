@@ -10,6 +10,9 @@
     --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
 }
 
+body {
+    transform: scale(1);
+}
 
 *{
     font-family: 'Poppins', sans-serif;
@@ -307,33 +310,27 @@ section{
     color: black;
 }
 
-/* .slider{
-    top: 173.77px;
-    bottom: 220px;
-    overflow: hidden;
-} */
 
 
 .video-background {
     position: relative;
-    width: 100%; /* Замените на нужную ширину */
-    height: 00px; /* Замените на нужную высоту */
+    width: 100%;
+    height: 00px;
 }
 
 .video-wrap {
     position: absolute;
-    top: -375px;
-    right: 16rem; /* Помещаем блок справа */
-    width: 80rem; /* Задаем ширину видео блока */
-    height: 36.7rem; /* Задаем высоту видео блока */
-    /* Скрытие лишних частей видео, если они будут */
+    top: -444px;
+    right: 22rem;
+    width: 70rem;
+    height: 36.7rem;
     border-radius: 20px;
     overflow: hidden;
 }
 
 .video-wrap iframe {
-    width: 100%; /* Подстраиваем ширину iframe под блок */
-    height: 100%; /* Подстраиваем высоту iframe под блок */
+    width: 100%; 
+    height: 100%; 
 }
 
 .container-home .blurry-background1 {
@@ -344,17 +341,17 @@ section{
     border: var(--border); 
     margin: 1rem 0;
     backdrop-filter: blur(5px); 
-    max-width: 30%;
+    max-width: 26%;
     right:100px;
     border: 2px solid rgba(148, 146, 146, 0.767);
     border-radius: 10px;
     padding: 20px;
     justify-content: flex-start;
-    margin-left: 1rem; 
+    margin-left: 20%; 
     font-size: 20px; 
     font-family: Arial, sans-serif;
     margin-top: -295px;
-    margin-left: 336px;
+    margin-left: 333px;
 }
 
 
@@ -386,51 +383,51 @@ section{
     align-items: center;
     gap: 1.5rem;
     padding: 2rem 1rem;
-    border: var(--border); /* замените на ваше значение */
-    margin: 1rem 0;
-    backdrop-filter: blur(5px); /* размытие заднего фона */
-    max-width: 30%;
-    right:100px;
+    border: var(--border); 
+    margin: 3rem ;
+    backdrop-filter: blur(5px); 
+    max-width: 26%;
+    right:50px;
     border: 2px solid rgba(148, 146, 146, 0.767);
     border-radius: 10px;
     padding: 20px;
     justify-content: flex-start;
-    margin-left: 23%; /* передвинуть влево на 10% */
-    font-size: 20px; /* размер текста */
+    margin-left: 20%; 
+    font-size: 20px;
     font-family: Arial, sans-serif;
     position: relative;
-    top: -290px;
+    top: -268px;
 }
 
 
 
 .blurry-background .content p {
-    color: #ffffff; /* цвет текста */
-    font-size: 24px; /* увеличение размера текста */
-    line-height: 1.6; /* высота строки */
-    font-family: 'Georgia', serif; /* высота строки */
+    color: #ffffff; 
+    font-size: 24px; 
+    line-height: 1.6; 
+    font-family: 'Georgia', serif; 
     
 }
 
 .second-blurry-background {
     position: absolute;
-    top: 285px; /* смещаем блок вниз */
-    left: calc(175px + 30% + 50px); /* смещаем блок вправо, учитывая ширину первого блока и отступ */
-    padding: 20px; /* добавляем отступы внутри блока */
-    border: 2px solid rgba(255, 255, 255, 0.767); /* добавляем обводку */
-    border-radius: 10px; /* закругляем углы */
-    backdrop-filter: blur(5px); /* размытие заднего фона */
-    max-width: 28%; /* ширина блока */
-    font-size: 20px; /* размер текста */
-    font-family: Arial, sans-serif; /* выберите шрифт */
+    top: 285px; 
+    left: calc(175px + 30% + 50px); 
+    padding: 20px; 
+    border: 2px solid rgba(255, 255, 255, 0.767); 
+    border-radius: 10px; 
+    backdrop-filter: blur(5px); 
+    max-width: 28%; 
+    font-size: 20px; 
+    font-family: Arial, sans-serif; 
 
 }
 
 .second-blurry-background .content p {
-    color: #c9bd1e; /* цвет текста */
-    font-size: 24px; /* увеличение размера текста */
-    line-height: 1.6; /* высота строки */
-    font-family: 'Georgia', serif; /* выберите шрифт */
+    color: #c9bd1e; 
+    font-size: 24px; 
+    line-height: 1.6; 
+    font-family: 'Georgia', serif; 
 }
 
 
@@ -519,11 +516,10 @@ section{
 }
 
 
-/* Стили для h1 */
 #moving-text .text3d-3 {
     text-align: center;
     text-transform: uppercase;
-    font-size: 4em;
+    font-size: 3.7em;
     letter-spacing: .1em;
     color: transparent;
     -webkit-text-stroke: 2px rgb(218, 215, 215);
@@ -835,16 +831,7 @@ section{
     background-position: bottom 10rem;
 
 }
-/* .image-container {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 2rem 1rem;
-    border: var(--border);
-    margin: 1rem 0;
-    height: 0rem;
-    
-  } */
+
 
 .arrivals .arrivals-slider .box {
     display: flex;
@@ -862,7 +849,7 @@ section{
 }
 
 .arrivals .arrivals-slider .box .image img {
-    height: 18rem;
+    height: 16rem;
 
 }
 
@@ -1086,8 +1073,7 @@ loader
 }
 
 .header .header-1 .logo-image {
-    height: 70px; /* Задайте желаемую высоту логотипа */
-     /* Добавьте отступ между логотипом и текстом */
+    height: 70px; 
 }
 
 
@@ -1228,4 +1214,118 @@ text-transform: none;
 
 .new-products h3, .new-products h1, .new-products p {
     text-transform: none;
+}
+
+.minimalist-theme {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.minimalist-theme h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.minimalist-theme p {
+    text-transform: none;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.minimalist-theme .form-group {
+    margin-bottom: 30px;
+}
+
+.minimalist-theme label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.minimalist-theme input,
+.minimalist-theme textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 1.1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.minimalist-theme textarea {
+    height: 150px;
+}
+
+.minimalist-theme .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.minimalist-theme .submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    text-align: center;
+    font-size: 28px;
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 50%; 
+    height: 7%; 
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer .box-container .box span{
+    display: block;
+    font-size: 1.4rem;
+    color:var(--light-color);
+    padding:1rem 0;
+    color:#DCDCDC;
 }

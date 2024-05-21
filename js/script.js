@@ -18,13 +18,12 @@ document.querySelector('#close-login-btn').onclick = () =>{
 
 window.onscroll = () => {
   const header = document.querySelector('.header .header-2');
-  const barrier = 300; // Измените это значение на нужное вам
+  const barrier = 300;
 
-  // Проверяем, находится ли пользователь выше барьера
   if (window.scrollY <= barrier) {
-    header.classList.remove('active'); // Удаляем класс active, если пользователь находится выше барьера
+    header.classList.remove('active'); 
   } else {
-    header.classList.add('active'); // Добавляем класс active, если пользователь прокрутил страницу ниже барьера
+    header.classList.add('active'); 
   }
 }
 
@@ -48,27 +47,6 @@ function fadeOut(){
   setTimeout(loader, 4000);
 }
 
-// var swiper = new Swiper(".books-slider", {
-//   direction: "vertical",
-//   loop: true,
-//   centeredSlides: true,
-//   autoplay: {
-//     delay: 9500,
-//     disableOnInteraction: false,
-//   },
-
-//   breakpoints: {
-//     0: {
-//       slidesPerView: 1,
-//     },
-//     1024: {
-//       slidesPerView: 1,
-//     },
-//     1: {
-//       slidesPerView: 1,
-//     },
-//   },
-// });
 
 var swiper = new Swiper(".featured-slider", {
   spaceBetween: 10,
@@ -170,4 +148,32 @@ document.addEventListener('mousemove', function(e) {
   movingText.style.left = x + 'px';
   movingText.style.top = y + 'px';
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const requestForm = document.getElementById('requestForm');
+  const modal = document.getElementById('modal');
+  const closeModalBtn = modal.querySelector('.close');
+
+  });
+
+
+});
+
+document.getElementById('requestForm').addEventListener('submit', function(event) {
+  event.preventDefault(); 
+  
+  var formData = new FormData(this);
+
+  fetch('/submit', {
+      method: 'POST',
+      body: formData
+  }).then(function(response) {
+      if (response.ok) {
+          window.location.href = '/thank-you.html';
+      } else {
+          alert('Ошибка при отправке формы. Попробуйте снова.');
+      }
+  }).catch(function(error) {
+      alert('Ошибка при отправке формы. Попробуйте снова.');
+  });
 });
