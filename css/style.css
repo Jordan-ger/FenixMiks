@@ -1328,4 +1328,9 @@ text-transform: none;
     color:var(--light-color);
     padding:1rem 0;
     color:#DCDCDC;
+    text-transform: none;
+}
+
+#email {
+    text-transform: none;
 }

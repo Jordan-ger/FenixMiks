@@ -426,6 +426,7 @@ footer {
     color:var(--light-color);
     padding:1rem 0;
     color:#DCDCDC;
+    text-transform: none;
 }
 
 .footer .box-container .box a i{
