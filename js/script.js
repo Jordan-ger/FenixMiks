@@ -6,15 +6,6 @@ document.querySelector('#search-btn').onclick = () =>{
   searchForm.classList.toggle('active');
 }
 
-let loginForm = document.querySelector('.login-form-container');
-
-document.querySelector('#login-btn').onclick = () =>{
-  loginForm.classList.toggle('active');
-}
-
-document.querySelector('#close-login-btn').onclick = () =>{
-  loginForm.classList.remove('active');
-}
 
 window.onscroll = () => {
   const header = document.querySelector('.header .header-2');
@@ -196,4 +187,13 @@ document.addEventListener("DOMContentLoaded", function() {
           alert('Ошибка при отправке сообщения: ' + error);
       });
   });
+});
+
+document.getElementById('phone').addEventListener('input', function (e) {
+  let x = e.target.value.replace(/\D/g, '').match(/(\d{1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
+  e.target.value = x[1] ? '+7 (' + x[1] + (x[2] ? x[2] : '') : '';
+  if (x[2]) e.target.value += ') ' + x[2];
+  if (x[3]) e.target.value += ' ' + x[3];
+  if (x[4]) e.target.value += '-' + x[4];
+  if (x[5]) e.target.value += '-' + x[5];
 });
