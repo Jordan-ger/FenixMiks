@@ -177,3 +177,23 @@ document.getElementById('requestForm').addEventListener('submit', function(event
       alert('Ошибка при отправке формы. Попробуйте снова.');
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById('requestForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const formData = new FormData(this);
+      
+      fetch('submit.php', {
+          method: 'POST',
+          body: formData
+      })
+      .then(response => response.text())
+      .then(data => {
+          alert(data);
+      })
+      .catch(error => {
+          alert('Ошибка при отправке сообщения: ' + error);
+      });
+  });
+});
