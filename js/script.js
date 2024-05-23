@@ -159,24 +159,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-document.getElementById('requestForm').addEventListener('submit', function(event) {
-  event.preventDefault(); 
+// document.getElementById('requestForm').addEventListener('submit', function(event) {
+//   event.preventDefault(); 
   
-  var formData = new FormData(this);
+//   var formData = new FormData(this);
 
-  fetch('/submit', {
-      method: 'POST',
-      body: formData
-  }).then(function(response) {
-      if (response.ok) {
-          window.location.href = '/thank-you.html';
-      } else {
-          alert('Ошибка при отправке формы. Попробуйте снова.');
-      }
-  }).catch(function(error) {
-      alert('Ошибка при отправке формы. Попробуйте снова.');
-  });
-});
+//   fetch('/submit', {
+//       method: 'POST',
+//       body: formData
+//   }).then(function(response) {
+//       if (response.ok) {
+//           window.location.href = '/submit.php';
+//       } else {
+//           alert('Ошибка при отправке формы. Попробуйте снова.');
+//       }
+//   }).catch(function(error) {
+//       alert('Ошибка при отправке формы. Попробуйте снова.');
+//   });
+// });
 
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById('requestForm').addEventListener('submit', function(e) {
