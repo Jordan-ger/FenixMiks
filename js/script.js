@@ -1,42 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-searchForm = document.querySelector('.search-form');
-
-document.querySelector('#search-btn').onclick = () =>{
-  searchForm.classList.toggle('active');
-}
-
-
-window.onscroll = () => {
-  const header = document.querySelector('.header .header-2');
-  const barrier = 300;
-
-  if (window.scrollY <= barrier) {
-    header.classList.remove('active'); 
-  } else {
-    header.classList.add('active'); 
-  }
-}
-
-window.onload = () =>{
-
-  if(window.scrollY > 80){
-    document.querySelector('.header .header-2').classList.add('active');
-  }else{
-    document.querySelector('.header .header-2').classList.remove('active');
-  }
-
-  fadeOut();
-
-}
-
-function loader(){
-  document.querySelector('.loader-container').classList.add('active');
-}
-
-function fadeOut(){
-  setTimeout(loader, 4000);
-}
 
 
 var swiper = new Swiper(".featured-slider", {
