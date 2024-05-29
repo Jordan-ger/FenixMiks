@@ -674,12 +674,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.getElementById('phone').addEventListener('input', function (e) {
   let x = e.target.value.replace(/\D/g, '').match(/(\d{1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
-  e.target.value = x[1] ? '+7 (' + x[1] + (x[2] ? x[2] : '') : '';
-  if (x[2]) e.target.value += ') ' + x[2];
-  if (x[3]) e.target.value += ' ' + x[3];
-  if (x[4]) e.target.value += '-' + x[4];
-  if (x[5]) e.target.value += '-' + x[5];
+  if (!x) return;
+
+  let formattedNumber = '+7';
+  if (x[2]) {
+    formattedNumber += ' (' + x[2];
+    if (x[3]) formattedNumber += ') ' + x[3];
+    if (x[4]) formattedNumber += '-' + x[4];
+    if (x[5]) formattedNumber += '-' + x[5];
+  } else {
+    formattedNumber += ' (' + x[1];
+  }
+
+  e.target.value = formattedNumber;
 });
+
 
 </script>
 
