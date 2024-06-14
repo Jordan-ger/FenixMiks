@@ -1,1 +1,1 @@
-ссылка на презентацию: https://docs.google.com/file/d/1PsWu40lu_PkUd7T2T6WZyuTQWYstMS9j/edit?usp=docslist_api&filetype=mspresentation
+ссылка на презентацию: https://docs.google.com/presentation/d/1ARoeCY3zwBDlCGVBTxsgdsfJ8SBeeKzREv-WrFL7IhQ/edit?usp=sharing
