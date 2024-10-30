@@ -1,0 +1,594 @@
+<?php
+$server_name = "localhost";
+$login = "u2277860_default";
+$pass = "lbMD4007zgDMIiDl";
+$db = "u2277860_default";
+
+$con = mysqli_connect($server_name, $login, $pass, $db);
+mysqli_set_charset($con, "utf8");
+
+if ($con == false) {
+  echo "Ошибка подключения";
+}
+
+$query = "SELECT * FROM `osnovniebluda` ORDER BY `id` ASC";
+$query2 = "SELECT * FROM `kashivstakane` ORDER BY `id` ASC";
+$query3 = "SELECT * FROM `kiseli` ORDER BY `id` ASC";
+$query4 = "SELECT * FROM `irp` ORDER BY `id` ASC";
+$query5 = "SELECT * FROM `SmesiVipechka` ORDER BY `id` ASC";
+$query7 = "SELECT * FROM `Kosmonavtam` ORDER BY `id` ASC";
+
+$result = mysqli_query($con, $query);
+$result2 = mysqli_query($con, $query2);
+$result3 = mysqli_query($con, $query3);
+$result4 = mysqli_query($con, $query4);
+$result5 = mysqli_query($con, $query5);
+$result7 = mysqli_query($con, $query7);
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог</title>
+  <link rel="stylesheet" href="/public/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/logo/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/logo/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/logo/favicon-16x16.png">
+  <link rel="manifest" href="../images/logo/site.webmanifest">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+</head>
+
+<body>
+  <div class="header-wrapper">
+    <div class="header-container">
+      <div class="logo">
+        <img class="logo-img" src="/src/zuy.png" alt="" />
+        <div class="title-div">
+          <a class="link" href="/"><span class="title-logo">FENIXMIKS</span></a>
+          <span class="title">Натурально. Просто. Вкусно.</span>
+        </div>
+      </div>
+      <div class="title-menu">
+        <a class="link" href="/public/catalog.php">
+          <div class="item-menu">Каталог</div>
+        </a>
+        <a class="link" href="/pages/about-us.html">
+          <div class="item-menu">О нас</div>
+        </a>
+        <a class="link" href="/public/contact.html">
+          <div class="item-menu">Контакты</div>
+        </a>
+        <a class="link" href="/public/delivery.html">
+          <div class="item-menu">Доставка</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="title-cat-wrapper">
+    <div class="title-cat-container">
+      <span class="title-cat-span">Категории</span>
+    </div>
+  </div>
+
+
+  <div class="category-container ref">
+
+    <div class="category-item">
+      <div class="img-category">
+        <img class="category-img" src="../images/category/kashi.jpg" alt="" />
+      </div>
+      <div class="link-kategory">
+        <a class="link" href="#por-in-glass"><span class="category-title">Продукция не требующая варки</span></a>
+      </div>
+    </div>
+
+    <div class="category-item">
+      <div class="img-category">
+        <img class="category-img" src="../images/category/osn.jpg" alt="" />
+      </div>
+      <div class="link-kategory">
+        <a class="link" href="#main-dish"><span class="category-title">Продукция требующая варки</span></a>
+      </div>
+    </div>
+
+    <div class="category-item">
+      <div class="img-category">
+        <img class="category-img" src="../images/category/kiseli.jpg" alt="" />
+      </div>
+      <div class="link-kategory">
+        <a class="link" href="#jelly"><span class="category-title">Кисели</span></a>
+      </div>
+    </div>
+
+    <div class="category-item">
+      <div class="img-category">
+        <img class="category-img" src="../images/category/irp.jpg" alt="" />
+      </div>
+      <div class="link-kategory">
+        <a class="link" href="#irp"><span class="category-title">Индивидуальные <br> рационы питания</span></a>
+      </div>
+    </div>
+
+    <div class="category-item">
+      <div class="img-category">
+        <img class="category-img" src="../images/category/vipech.jpg" alt="" />
+      </div>
+      <div class="link-kategory">
+        <a class="link" href="#smesi"><span class="category-title">Готовые смеси <br> для выпечки</span></a>
+      </div>
+    </div>
+
+    <div class="category-item">
+      <div class="img-category">
+        <img class="category-img" src="../images/category/kosm.jpg" alt="" />
+      </div>
+      <div class="link-kategory">
+        <a class="link" href="#pitkosm"><span class="category-title">Питание космонавтов</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="title-prod-wrapper">
+    <div class="title-prod-container">
+      <span id="por-in-glass" class="title-prod-span">Продукция не требующая варки</span>
+    </div>
+  </div>
+
+  <div class="products-container">
+    <div style='width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;'>
+      <?php
+      while ($prod2 = mysqli_fetch_assoc($result2)) {
+      ?>
+
+        <div class="products-item" style="position: relative;">
+          <div class="products-img">
+            <img class="normal-img expandable-img" style="width: 100%; height: 100%; border-radius: 15px; margin-bottom: 15px" src="data:image/png;base64,<?= base64_encode($prod2['img']) ?>" alt="Изображение">
+            <?php if (!empty($prod2['img_hover'])) { ?>
+              <img class="hover-img expandable-img" style="width: 100%; height: 100%; border-radius: 15px; margin-bottom: 15px; display: none;" src="data:image/png;base64,<?= base64_encode($prod2['img_hover']) ?>" alt="Изображение">
+            <?php } ?>
+          </div>
+          <div class="products-name">
+            <?= $prod2['name'] ?>
+          </div>
+          <div class="wrapper-produccts">
+            <div class="products-price" style="margin-bottom: 10px;">
+              <span style="color: #FF9900">Цена:</span>
+              <?= $prod2['price'] ?> ₽
+            </div>
+            <div style="margin-bottom: 10px;">
+              <span style="color: #FF9900">Вес:</span>
+              <?= $prod2['gramovki'] ?> гр.
+            </div>
+            <div>
+              <span style="color: #FF9900">Категория:</span>
+              <?= $prod2['kategoria'] ?>
+            </div>
+          </div>
+
+        </div>
+      <?php
+      }
+      ?>
+
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+      </div>
+    </div>
+  </div>
+
+  <div class="title-prod-wrapper">
+    <div class="title-prod-container">
+      <span id="main-dish" class="title-prod-span">Продукция требующая варки</span>
+    </div>
+  </div>
+
+  <div class="products-container">
+    <div style='width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;'>
+      <?php
+      while ($prod = mysqli_fetch_assoc($result)) {
+      ?>
+        <div class="products-item" style="position: relative;">
+          <div class="products-img">
+            <img class="normal-img expandable-img" style="width: 100%; height: 100%; border-radius: 15px; margin-bottom: 15px" src="data:image/png;base64,<?= base64_encode($prod['img']) ?>" alt="Изображение">
+            <?php if (!empty($prod['img_hover'])) { ?>
+              <img class="hover-img expandable-img" style="width: 100%; height: 100%; border-radius: 15px; margin-bottom: 15px; display: none;" src="data:image/png;base64,<?= base64_encode($prod['img_hover']) ?>" alt="Изображение">
+            <?php } ?>
+          </div>
+          <div class="wrapper-produccts">
+            <div class="products-name" style="margin-bottom: 10px;">
+              <?= $prod['name'] ?>
+            </div>
+            <div class="products-price" style="margin-bottom: 10px;">
+              <span style="color: #FF9900">Цена:</span>
+              <?= $prod['price'] ?> ₽
+            </div>
+            <div style="margin-bottom: 10px;">
+              <span style="color: #FF9900">Вес:</span>
+              <?= $prod['gramovki'] ?> гр.
+            </div>
+            <div>
+              <span style="color: #FF9900">Категория:</span>
+              <?= $prod['kategoria'] ?>
+            </div>
+          </div>
+        </div>
+      <?php
+      }
+      ?>
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+      </div>
+      <div style='width: 95%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;'>
+        <style>
+          .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            text-align: center;
+          }
+
+          .modal-content {
+            max-width: 100%;
+            max-height: 80%;
+            margin: auto;
+            display: block;
+          }
+
+          .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+          }
+
+          .close:hover {
+            color: red;
+          }
+        </style>
+      </div>
+    </div>
+    <!--  -->
+
+    <div class="title-prod-wrapper">
+      <div class="title-prod-container">
+        <span id="jelly" class="title-prod-span">Кисели</span>
+      </div>
+    </div>
+
+    <div class="products-container">
+      <div style='width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;'>
+        <?php
+        while ($prod3 = mysqli_fetch_assoc($result3)) {
+        ?>
+          <div class="products-item" style="position: relative;">
+            <div class="products-img">
+              <img class="normal-img expandable-img" style="width: 100%; height: 100%; border-radius: 15px; margin-bottom: 15px" src="data:image/png;base64,<?= base64_encode($prod3['img']) ?>" alt="Изображение">
+              <?php if (!empty($prod3['img_hover'])) { ?>
+                <img class="hover-img expandable-img" style="width: 100%; height: 100%; border-radius: 15px; margin-bottom: 15px; display: none;" src="data:image/png;base64,<?= base64_encode($prod3['img_hover']) ?>" alt="Изображение">
+              <?php } ?>
+            </div>
+            <div class="products-name">
+              <?= $prod3['name'] ?>
+            </div>
+            <div class="wrapper-produccts">
+              <div class="products-price" style="margin-bottom: 10px;">
+                <span style="color: #FF9900">Цена:</span>
+                <?= $prod3['price'] ?> ₽
+              </div>
+              <div style="margin-bottom: 10px;">
+                <span style="color: #FF9900">Вес:</span>
+                <?= $prod3['gramovki'] ?> гр.
+              </div>
+              <div>
+                <span style="color: #FF9900">Категория:</span>
+                <?= $prod3['kategoria'] ?>
+              </div>
+            </div>
+
+          </div>
+        <?php
+        }
+        ?>
+        <div id="myModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modalImg">
+        </div>
+      </div>
+    </div>
+
+    <div class="title-prod-wrapper">
+      <div class="title-prod-container">
+        <span id="irp" class="title-prod-span">Индивидуальные рациона питания</span>
+      </div>
+    </div>
+
+    <div class="products-container">
+      <div style='width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;'>
+        <?php
+        while ($prod4 = mysqli_fetch_assoc($result4)) {
+        ?>
+
+          <div class="products-item" style="position: relative;">
+            <div class="products-img">
+              <img class="normal-img expandable-img" style="width: 100%; height: 100%; border-radius: 15px; margin-bottom: 15px" src="data:image/png;base64,<?= base64_encode($prod4['img']) ?>" alt="Изображение">
+              <?php if (!empty($prod4['img_hover'])) { ?>
+                <img class="hover-img expandable-img" style="width: 100%; height: 100%; border-radius: 15px; margin-bottom: 15px; display: none;" src="data:image/png;base64,<?= base64_encode($prod4['img_hover']) ?>" alt="Изображение">
+              <?php } ?>
+            </div>
+            <div class="products-name">
+              <?= $prod4['name'] ?>
+            </div>
+            <div class="wrapper-produccts">
+              <div class="products-price" style="margin-bottom: 10px;">
+                <span style="color: #FF9900">Цена:</span>
+                <?= $prod4['price'] ?> ₽
+              </div>
+              <div style="margin-bottom: 10px;">
+                <span style="color: #FF9900">Вес:</span>
+                <?= $prod4['gramovki'] ?> гр.
+              </div>
+              <div>
+                <span style="color: #FF9900">Категория:</span>
+                <?= $prod4['kategoria'] ?>
+              </div>
+            </div>
+
+          </div>
+        <?php
+        }
+        ?>
+        <div id="myModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modalImg">
+        </div>
+      </div>
+    </div>
+
+    <div class="title-prod-wrapper">
+      <div class="title-prod-container">
+        <span id="smesi" class="title-prod-span">Готовые смеси для выпечки</span>
+      </div>
+    </div>
+
+    <div class="products-container">
+      <div style='width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;'>
+        <?php
+        while ($prod5 = mysqli_fetch_assoc($result5)) {
+        ?>
+
+          <div class="products-item" style="position: relative;">
+            <div class="products-img">
+              <img class="normal-img expandable-img" style="width: 100%; height: 100%; border-radius: 15px; margin-bottom: 15px" src="data:image/png;base64,<?= base64_encode($prod5['img']) ?>" alt="Изображение">
+              <?php if (!empty($prod5['img_hover'])) { ?>
+                <img class="hover-img expandable-img" style="width: 100%; height: 100%; border-radius: 15px; margin-bottom: 15px; display: none;" src="data:image/png;base64,<?= base64_encode($prod5['img_hover']) ?>" alt="Изображение">
+              <?php } ?>
+            </div>
+            <div class="products-name">
+              <?= $prod5['name'] ?>
+            </div>
+            <div class="wrapper-produccts">
+              <div class="products-price" style="margin-bottom: 10px;">
+                <span style="color: #FF9900">Цена:</span>
+                <?= $prod5['price'] ?> ₽
+              </div>
+              <div style="margin-bottom: 10px;">
+                <span style="color: #FF9900">Вес:</span>
+                <?= $prod5['gramovki'] ?> гр.
+              </div>
+              <div>
+                <span style="color: #FF9900">Категория:</span>
+                <?= $prod5['kategoria'] ?>
+              </div>
+            </div>
+
+          </div>
+        <?php
+        }
+        ?>
+        <div id="myModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modalImg">
+        </div>
+      </div>
+    </div>
+
+    <div class="title-prod-wrapper">
+      <div class="title-prod-container">
+        <span id="pitkosm" class="title-prod-span">Питание космонавтов</span>
+      </div>
+    </div>
+
+    <div class="products-container">
+      <div style='width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;'>
+        <?php
+        while ($prod7 = mysqli_fetch_assoc($result7)) {
+        ?>
+          <div class="products-item" style="position: relative;">
+            <div class="products-img">
+              <img class="normal-img expandable-img" style="width: 100%; height: 100%; border-radius: 15px; margin-bottom: 15px" src="data:image/png;base64,<?= base64_encode($prod7['img']) ?>" alt="Изображение">
+              <?php if (!empty($prod7['img_hover'])) { ?>
+                <img class="hover-img expandable-img" style="width: 100%; height: 100%; border-radius: 15px; margin-bottom: 15px; display: none;" src="data:image/png;base64,<?= base64_encode($prod7['img_hover']) ?>" alt="Изображение">
+              <?php } ?>
+            </div>
+            <div class="products-name">
+              <?= $prod7['name'] ?>
+            </div>
+            <div class="wrapper-produccts">
+              <div class="products-price" style="margin-bottom: 10px;">
+                <span style="color: #FF9900">Цена:</span>
+                <?= $prod7['price'] ?> ₽
+              </div>
+              <div style="margin-bottom: 10px;">
+                <span style="color: #FF9900">Вес:</span>
+                <?= $prod7['gramovki'] ?> гр.
+              </div>
+              <div>
+                <span style="color: #FF9900">Категория:</span>
+                <?= $prod7['kategoria'] ?>
+              </div>
+            </div>
+
+          </div>
+        <?php
+        }
+        ?>
+        <div id="myModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modalImg">
+        </div>
+      </div>
+    </div>
+
+    <div id="toTop"> ^ </div>
+
+    <footer class="podval">
+      <div class="podval-container">
+        <div class="footer-logo">
+          <div class="title-div">
+            <span style="margin-bottom: 1px;" class="title-logo">FENIXMIKS</span>
+            <span class="title">Сублимированные продукты питания</span>
+            <span class="copyright" style="width: max-content;">Copyright © 2023 FENIXMIKS. Все права защищены</span>
+            </span>
+          </div>
+        </div>
+        <div class='footer-menu'>
+          <a class="link" href="/public/catalog.php">
+            <div class="item-menu">Каталог</div>
+          </a>
+          <a class="link" href="/pages/about-us.html">
+            <div class="item-menu">О нас</div>
+          </a>
+          <a class="link" href="/public/contact.html">
+            <div class="item-menu">Контакты</div>
+          </a>
+          <a class="link" href="/public/delivery.html">
+            <div class="item-menu">Доставка</div>
+          </a>
+        </div>
+        <div class="info-block">
+          <div class="item-info">
+            <img class="img-item" src="/src/phone.png" alt="">
+            <span class="phone">+7 (978) 286 67 27</span>
+          </div>
+          <div class="item-info">
+            <img class="img-item" src="/src/email.png" alt="">
+            <span class="phone">info@fenixmiks.ru</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <script type="text/javascript">
+      $(function() {
+
+        $(window).scroll(function() {
+
+          if ($(this).scrollTop() != 0) {
+
+            $('#toTop').fadeIn();
+
+          } else {
+
+            $('#toTop').fadeOut();
+
+          }
+
+        });
+
+        $('#toTop').click(function() {
+
+          $('body,html').animate({
+            scrollTop: 0
+          }, 800);
+
+        });
+
+      });
+    </script>
+
+    <script>
+      document.querySelectorAll('.products-img').forEach(function(productImg) {
+        const normalImg = productImg.querySelector('.normal-img');
+        const hoverImg = productImg.querySelector('.hover-img');
+
+        if (normalImg && hoverImg) {
+          productImg.addEventListener('mouseenter', function() {
+            normalImg.style.display = 'none';
+            hoverImg.style.display = 'block';
+          });
+
+          productImg.addEventListener('mouseleave', function() {
+            normalImg.style.display = 'block';
+            hoverImg.style.display = 'none';
+          });
+        }
+      });
+    </script>
+    <script>
+      document.querySelectorAll('.expandable-img').forEach(function(img) {
+        img.addEventListener('click', function() {
+          var modal = document.getElementById('myModal');
+          var modalImg = document.getElementById('modalImg');
+
+          modal.style.display = 'block';
+          modalImg.src = img.src;
+
+          var close = document.querySelector('.close');
+          close.addEventListener('click', function() {
+            modal.style.display = 'none';
+          });
+
+          window.addEventListener('click', function(event) {
+            if (event.target == modal) {
+              modal.style.display = 'none';
+            }
+          });
+        });
+      });
+    </script>
+</body>
+
+</html>
